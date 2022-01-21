@@ -35,7 +35,8 @@ class GazeTracking(object):
             int(self.eye_right.pupil.x)
             int(self.eye_right.pupil.y)
             return True
-        except AttributeError:
+        except Exception as e:
+            _ = e
             return False
 
     def _analyze(self):
